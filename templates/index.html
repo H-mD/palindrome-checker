@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Palindrome Checker</title>
+</head>
+<body>
+    <h1>Palindrome Checker</h1>
+    
+    <form method="POST">
+        <p>
+            <input type="text" name="text" value="{{ input_text }}" placeholder="Masukkan string">
+        </p>
+        <p>
+            <input type="text" value="{{ result or '' }}" disabled>
+        </p>
+        <p>
+            <input type="submit" value="Cek Palindrome">
+        </p>
+    </form>
+</body>
+</html>
