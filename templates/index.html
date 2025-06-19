@@ -1,21 +1,82 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
+    <meta charset="UTF-8">
     <title>Palindrome Checker</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f4f6f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            background-color: #fff;
+            padding: 30px 40px;
+            border-radius: 10px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            font-size: 15px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #43a047;
+        }
+
+        input[disabled] {
+            background-color: #f1f1f1;
+            color: #444;
+        }
+    </style>
 </head>
 <body>
-    <h1>Palindrome Checker</h1>
-    
-    <form method="POST">
-        <p>
-            <input type="text" name="text" value="{{ input_text }}" placeholder="Masukkan string">
-        </p>
-        <p>
-            <input type="text" value="{{ result or '' }}" disabled>
-        </p>
-        <p>
-            <input type="submit" value="Cek Palindrome">
-        </p>
-    </form>
+
+    <div class="form-container">
+        <h1>Palindrome Checker</h1>
+
+        <form method="POST">
+            <p>
+                <input type="text" name="text" value="{{ input_text }}" placeholder="Masukkan string">
+            </p>
+            <p>
+                <input type="text" value="{{ result or '' }}" disabled>
+            </p>
+            <p>
+                <input type="submit" value="Cek Palindrome">
+            </p>
+        </form>
+    </div>
+
 </body>
 </html>
